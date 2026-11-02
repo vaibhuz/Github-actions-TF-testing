@@ -7,7 +7,7 @@ variable "cidr" {
 variable "name_tags" {
   description = "Name tag for the VPC"
   type        = string
-  default     = "dev-vpc"
+  default     = "test-vpc"
 }
 
 variable "subnet_cidr" {
@@ -19,5 +19,5 @@ variable "subnet_cidr" {
 variable "subnet_tag" {
   description = "Name tag for the subnet"
   type        = string
-  default     = "dev-subnet"
+  default     = "test-subnet"
 }
