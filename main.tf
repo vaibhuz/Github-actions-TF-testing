@@ -1,15 +1,9 @@
-resource "aws_vpc" "name" {
-    cidr_block = var.cidr
-    tags={
-        Name = var.name_tags   
-    }
-  
-}
+resource "aws_instance" "my_ec2" {
+  ami           = "ami-0c230065b91270bc6"
+  instance_type = "t2.micro"
 
-resource "aws_subnet" "dev"{
-    cidr_block = var.subnet_cidr
-    vpc_id = aws_vpc.name.id
-    tags = {
-        Name = var.subnet_tag
-    }
+  tags = {
+    Name        = "Terraform-EC2"
+    Environment = "Dev"
+  }
 }
